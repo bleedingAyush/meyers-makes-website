@@ -19,7 +19,7 @@ const Footer = () => {
       <div className="w-full max-w-[1200px]">
         <div className="flex max-sm:flex-col max-sm:px-4 max-sm:gap-8 justify-between">
           <div className="flex flex-col">
-            <Image src={logo} height={120} />
+            <Image src={logo} height={120} alt="Logo" />
             <span className="text-2xl max-sm:text-xl mt-4 font-semibold text-white">
               Meyers Makes & Maintenance
             </span>
@@ -46,26 +46,26 @@ const Footer = () => {
           <div className="flex flex-col gap-2 ">
             <span className="font-medium text-lg text-white">Contact Info</span>
             <div className="flex gap-1.5">
-              <Image src={map} height={18} alt="" />
+              <Image src={map} height={18} alt="map svg" />
               <span className=" text-white">Ontario, Canada</span>
             </div>
             <Link href={"mailto:Benmeyers94@gmail.com"} className="flex gap-2">
-              <Image src={mail} height={18} alt="" />
+              <Image src={mail} height={18} alt="mail svg" />
               <span className="text-white">Benmeyers94@gmail.com</span>
             </Link>
             <Link href={"tel:+1 226-168-1749"} className="flex gap-1.5">
-              <Image src={phone} height={18} alt="" />
+              <Image src={phone} height={18} alt="phone svg" />
               <span className="text-white ">+1 226-168-1749</span>
             </Link>
             {/*  */}
             <div className="flex mt-2 flex-col gap-2 ">
               <span className="font-medium text-lg text-white">Social</span>
               <Link href={"/"} className="flex gap-2">
-                <Image src={facebook} height={18} alt="" />
+                <Image src={facebook} height={18} alt="fb svg" />
                 <span className="text-white">Facebook</span>
               </Link>
               <Link href={"/"} className="flex gap-2">
-                <Image src={instagram} height={18} alt="" />
+                <Image src={instagram} height={18} alt="insta svg" />
                 <span className="text-white">Instagram</span>
               </Link>
             </div>
@@ -77,25 +77,51 @@ const Footer = () => {
             </span>
             <div className="grid grid-cols-3 gap-1">
               <div className="w-24 h-24 relative">
-                <Image src={igphoto1} layout="fill" objectFit="cover" />
+                <Image
+                  src={igphoto1}
+                  layout="fill"
+                  objectFit="cover"
+                  alt="ig photo1"
+                />
               </div>
               <div className="w-24 h-24 relative">
-                <Image src={igphoto2} layout="fill" objectFit="cover" />
+                <Image
+                  src={igphoto2}
+                  layout="fill"
+                  objectFit="cover"
+                  alt="ig photo2"
+                />
               </div>
               <div className="w-24 h-24 relative">
-                <Image src={igphoto3} layout="fill" objectFit="cover" />
+                <Image
+                  src={igphoto3}
+                  layout="fill"
+                  objectFit="cover"
+                  alt="ig photo3"
+                />
               </div>
               <div className="w-24 h-24 relative">
-                <Image src={igphoto4} layout="fill" objectFit="cover" />
+                <Image
+                  src={igphoto4}
+                  layout="fill"
+                  objectFit="cover"
+                  alt="ig photo4"
+                />
               </div>
               <div className="w-24 h-24 relative">
-                <Image src={igphoto5} layout="fill" objectFit="cover" />
+                <Image
+                  src={igphoto5}
+                  layout="fill"
+                  objectFit="cover"
+                  alt="ig photo5"
+                />
               </div>
               <div className="w-24 h-24 relative">
                 <Image
                   src={"/carpentery.jpg"}
                   layout="fill"
                   objectFit="cover"
+                  alt="ig photo6"
                 />
               </div>
             </div>

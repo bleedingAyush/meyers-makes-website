@@ -36,7 +36,7 @@ const About = () => {
               </Link>
             </div>
             <div className="w-[35%] h-[26rem]  max-sm:w-full relative">
-              <Image src={ben} layout="fill" objectFit="cover" alt="" />
+              <Image src={ben} layout="fill" objectFit="cover" alt="Ben pic" />
             </div>
           </div>
         </div>

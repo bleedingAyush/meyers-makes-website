@@ -15,17 +15,17 @@ const Header = () => {
         </Link>
         <div className="flex w-[45%] justify-between items-center">
           <div className="flex gap-1.5">
-            <Image src={map} height={18} alt="" />
+            <Image src={map} height={18} alt="map svg" />
             <span className="font-medium text-white">Ontario, Canada</span>
           </div>
           <Link href={"mailto:Benmeyers94@gmail.com"} className="flex gap-2">
-            <Image src={mail} height={18} alt="" />
+            <Image src={mail} height={18} alt="mail svg" />
             <span className="font-medium text-white">
               Benmeyers94@gmail.com
             </span>
           </Link>
           <Link href={"tel:+1 226-168-1749"} className="flex gap-1.5">
-            <Image src={phone} height={18} alt="" />
+            <Image src={phone} height={18} alt="phone svg" />
             <span className="text-white font-medium">+1 226-168-1749</span>
           </Link>
         </div>

@@ -22,7 +22,7 @@ const Testimonials = () => {
           className="-z-10"
           layout="fill"
           objectFit="cover"
-          alt="Mountains"
+          alt="meeting"
         />
         <div className="py-28 xl:py-36 max-sm:py-16 max-sm:px-4 z-10  max-w-[1100px] w-full flex flex-col gap-12 max-sm:gap-16">
           <div className="w-full flex justify-center ">
