@@ -6,7 +6,10 @@ import ben from "../../public/ben.jpg";
 const About = () => {
   return (
     <>
-      <div className="w-full flex justify-center bg-white py-28 xl:py-36 max-sm:py-16">
+      <div
+        id="about"
+        className="w-full flex justify-center bg-white py-28 xl:py-36 max-sm:py-16"
+      >
         <div className="w-full max-w-[1200px]">
           <div className="w-full flex justify-center">
             <h2 className=" font-medium leading-snug font-semibold text-5xl max-sm:text-3xl border-b-2 border-button-color w-fit px-2">
@@ -29,7 +32,7 @@ const About = () => {
                 home dreams to life, one project at a time!
               </span>
               <Link
-                href={""}
+                href={"#booking"}
                 className="max-sm:w-full text-center font-semibold uppercase text-[15px] text-black bg-button-color px-12 py-2 hover:bg-white border-button-color border-2 mt-8 max-sm:mt-4"
               >
                 Schedule a booking

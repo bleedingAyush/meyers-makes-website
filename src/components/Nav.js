@@ -22,19 +22,19 @@ export default function Nav(props) {
         <div className="flex justify-between items-center h-full w-full px-4">
           <div className="flex gap-12">
             <Link
-              href={""}
+              href={"/"}
               className="lg:block hidden text-link-color font-medium"
             >
               Home
             </Link>
             <Link
-              href={""}
+              href={"#about"}
               className="lg:block hidden text-link-color font-medium"
             >
               About Us
             </Link>
             <Link
-              href={""}
+              href={"#services"}
               className="lg:block hidden text-link-color font-medium"
             >
               Services

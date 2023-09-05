@@ -13,7 +13,6 @@ import Testimonials from "@/components/Testimonial/Testimonials";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
-// scroll to a section
 // form submit
 // make the links workable
 // privacy policy/terms of use page

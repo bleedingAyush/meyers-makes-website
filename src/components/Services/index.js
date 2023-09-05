@@ -46,7 +46,10 @@ const items = [
 const Services = () => {
   return (
     <>
-      <div className="w-full flex justify-center bg-teal py-28 max-sm:py-16">
+      <div
+        id="services"
+        className="w-full flex justify-center bg-teal py-28 max-sm:py-16"
+      >
         <div className="w-full max-w-[1200px]">
           <div className="w-full flex justify-center">
             <h2 className=" font-medium leading-snug font-semibold text-5xl max-sm:text-3xl border-b-2 border-button-color w-fit px-2">
@@ -66,7 +69,7 @@ const Services = () => {
           <div className="w-full flex justify-center pt-20">
             <div className="flex max-sm:flex-col items-center gap-12 max-sm:gap-8">
               <Link
-                href={""}
+                href={"#booking"}
                 className="max-sm:w-full text-center font-semibold uppercase text-[15px] text-black bg-button-color px-12 py-2.5 hover:bg-white"
               >
                 Schedule a booking

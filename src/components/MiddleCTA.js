@@ -14,7 +14,7 @@ const MiddleCTA = () => {
           <div className="flex justify-end">
             <div className="flex flex-col items-center gap-12 gap-8">
               <Link
-                href={""}
+                href={"#booking"}
                 className="max-sm:w-full text-center font-semibold uppercase text-[15px] text-black bg-button-color px-12 py-2.5 hover:bg-white"
               >
                 Schedule a booking

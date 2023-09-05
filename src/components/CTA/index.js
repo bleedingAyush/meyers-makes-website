@@ -8,7 +8,10 @@ import ben from "../../../public/ben.jpg";
 const CTA = () => {
   return (
     <>
-      <div className="relative w-full max-sm:h-[110vh] h-screen xl:h-[90vh] flex justify-center">
+      <div
+        id="booking"
+        className="relative w-full max-sm:h-[110vh] h-screen xl:h-[90vh] flex justify-center"
+      >
         <div
           style={{
             background:

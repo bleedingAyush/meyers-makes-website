@@ -60,18 +60,30 @@ const Footer = () => {
             {/*  */}
             <div className="flex mt-2 flex-col gap-2 ">
               <span className="font-medium text-lg text-white">Social</span>
-              <Link href={"/"} className="flex gap-2">
+              <Link
+                href={"https://www.facebook.com/meyers.diy"}
+                className="flex gap-2"
+                target="_blank"
+              >
                 <Image src={facebook} height={18} alt="fb svg" />
                 <span className="text-white">Facebook</span>
               </Link>
-              <Link href={"/"} className="flex gap-2">
+              <Link
+                target="_blank"
+                href={"https://www.instagram.com/meyers.makes/"}
+                className="flex gap-2"
+              >
                 <Image src={instagram} height={18} alt="insta svg" />
                 <span className="text-white">Instagram</span>
               </Link>
             </div>
           </div>
 
-          <Link href="/" className="flex flex-col gap-2">
+          <Link
+            href="https://www.instagram.com/meyers.makes/"
+            target="_blank"
+            className="flex flex-col gap-2"
+          >
             <span className="text-lg text-white font-medium">
               Check us out on Instagram:
             </span>
