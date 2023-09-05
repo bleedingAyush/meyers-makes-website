@@ -34,7 +34,7 @@ const CTA = () => {
                 everything in between.
               </span>
               <Link
-                href={""}
+                href={"tel:+1 226-168-1749"}
                 className="flex justify-center items-center gap-8 w-80  max-sm:w-fit text-center font-semibold text-[15px] text-black bg-button-color px-4 py-2 hover:bg-white mt-8 max-sm:mt-4"
               >
                 <div className="w-16 relative h-16">
