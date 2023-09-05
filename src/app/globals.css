@@ -5,6 +5,13 @@
 :root {
   --foreground-color: #0d0d0d;
   --bg-color: #fcfcfc;
+  --animation-duration: 3200ms;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -14,4 +21,23 @@ body {
 
 #blackNav {
   height: 9rem;
+}
+
+@keyframes elementor-headline-dash {
+  0% {
+    stroke-dasharray: 0 1500;
+    opacity: 1;
+  }
+  100% {
+    stroke-dasharray: 1500 1500;
+    opacity: 1;
+  }
+}
+
+.animated-the-svg {
+  opacity: 0;
+  animation: elementor-headline-dash forwards;
+  animation-iteration-count: 1;
+  animation-duration: var(--animation-duration, 1.2s);
+  animation-delay: 2s;
 }

@@ -8,12 +8,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "logo-color": "#222021",
+        "logo-color": "#22211F",
         white: "#fcfcfc",
         "button-color": "#F2B72F",
         black: "#0d0d0d",
         "link-color": "#5b5b5b",
         "link-color-hover-text": "#0d0d0d",
+        teal: "#F9F6EF",
+        formColor: "#EBEAEA",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

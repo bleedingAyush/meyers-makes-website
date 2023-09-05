@@ -10,7 +10,9 @@ const Header = () => {
   return (
     <>
       <div className="max-w-[1200px] lg:flex hidden items-center w-full flex justify-between">
-        <Image src={Logo} height={110} alt="logo" />
+        <Link href={"/"}>
+          <Image src={Logo} height={110} alt="logo" />
+        </Link>
         <div className="flex w-[45%] justify-between items-center">
           <div className="flex gap-1.5">
             <Image src={map} height={18} alt="" />
@@ -29,7 +31,7 @@ const Header = () => {
         </div>
         <Link
           href={""}
-          className="font-semibold uppercase text-[15px] text-black bg-button-color px-6 py-2.5"
+          className="font-semibold uppercase text-[15px] text-black bg-button-color px-6 py-2.5 hover:bg-white"
         >
           Schedule a booking
         </Link>
