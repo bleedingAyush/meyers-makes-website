@@ -3,7 +3,6 @@ import roofing from "../../../public/roofing.jpg";
 import Image from "next/image";
 
 const Card = ({ title, description, image }) => {
-  console.log("image", image);
   return (
     <>
       <div className="bg-white h-64 w-72 flex flex-col justify-between pb-2">

@@ -15,8 +15,9 @@ import Footer from "@/components/Footer";
 
 // scroll to a section
 // form submit
-// deployment
-// lighthouse check
+// make the links workable
+// privacy policy/terms of use page
+// contact us page
 
 export default function Home() {
   return (

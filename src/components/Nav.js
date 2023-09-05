@@ -12,7 +12,6 @@ export default function Nav(props) {
   // const [loggedIn, setLoggedIn] = useContext(LoginContext);
 
   const handleNav = () => {
-    console.log(isMenuOpen);
     setIsMenuOpen(!isMenuOpen);
   };
 
