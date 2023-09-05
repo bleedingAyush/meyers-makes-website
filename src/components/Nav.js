@@ -77,22 +77,59 @@ export default function Nav(props) {
           </div>
           <div className="flex-col py-4">
             <ul>
-              <Link href={""}>
+              <Link href={"/"}>
                 <li onClick={() => setIsMenuOpen(false)} className="py-4">
                   Home
                 </li>
               </Link>
-              <Link href={""}>
+              <Link href={"#about"}>
                 <li onClick={() => setIsMenuOpen(false)} className="py-4">
-                  about
+                  About
+                </li>
+              </Link>
+              <Link href={"#services"}>
+                <li onClick={() => setIsMenuOpen(false)} className="py-4">
+                  Services
                 </li>
               </Link>
               <Link href={""}>
                 <li onClick={() => setIsMenuOpen(false)} className="py-4">
-                  services
+                  Contact
                 </li>
               </Link>
             </ul>
+            <Link
+              href={"#booking"}
+              onClick={() => setIsMenuOpen(false)}
+              className="max-sm:w-full flex flex-col items-center mt-4 text-center font-semibold uppercase text-[15px] text-black bg-button-color py-2.5 hover:bg-white"
+            >
+              <span>Schedule</span>
+              <span>a booking</span>
+            </Link>
+            <div className="flex justify-center w-full gap-8 mt-8">
+              <Link
+                target="_blank"
+                href={"https://www.instagram.com/meyers.makes/"}
+              >
+                <Image
+                  width={24}
+                  height={24}
+                  src={"/instagram.svg"}
+                  alt="instagram svg"
+                />
+              </Link>
+              <Link
+                href={"https://www.facebook.com/meyers.diy"}
+                target="_blank"
+              >
+                <Image
+                  width={24}
+                  height={24}
+                  src={"/facebookWhite.svg"}
+                  alt="facebook svg"
+                />
+              </Link>
+            </div>
           </div>
         </div>
       </nav>

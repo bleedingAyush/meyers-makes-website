@@ -69,8 +69,8 @@ const Footer = () => {
                 <span className="text-white">Facebook</span>
               </Link>
               <Link
-                target="_blank"
                 href={"https://www.instagram.com/meyers.makes/"}
+                target="_blank"
                 className="flex gap-2"
               >
                 <Image src={instagram} height={18} alt="insta svg" />

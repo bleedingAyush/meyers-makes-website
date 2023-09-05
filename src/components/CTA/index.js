@@ -26,7 +26,7 @@ const CTA = () => {
           objectFit="cover"
           alt="tools"
         />
-        <div className="py-28 xl:py-36 max-sm:py-16 max-sm:px-4 z-10  max-w-[1100px] w-full flex flex-col gap-12 max-sm:gap-16">
+        <div className="py-28 xl:py-36 max-sm:py-16 max-sm:px-4 z-10  max-w-[1100px] w-full flex flex-col xl:justify-center gap-12 max-sm:gap-16">
           <div className="w-full flex max-sm:flex-col max-sm:gap-12 max-sm:items-center justify-between ">
             <div className="flex w-[45%] max-sm:w-full flex-col h-full max-sm:items-center justify-between">
               <span className="font-semibold text-3xl max-sm:text-center max-sm:text-2xl text-white">

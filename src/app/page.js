@@ -14,9 +14,9 @@ import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
 // form submit
-// make the links workable
 // privacy policy/terms of use page
 // contact us page
+// test the layout in diff browsers
 
 export default function Home() {
   return (

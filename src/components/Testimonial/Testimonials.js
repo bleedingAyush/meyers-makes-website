@@ -9,7 +9,7 @@ import Card from "./Card";
 const Testimonials = () => {
   return (
     <>
-      <div className="relative w-full max-sm:h-[110vh] h-screen xl:h-[90vh] flex justify-center">
+      <div className="relative w-full max-sm:h-[110vh] h-screen xl:h-[100vh] flex justify-center">
         <div
           style={{
             background:
@@ -24,7 +24,7 @@ const Testimonials = () => {
           objectFit="cover"
           alt="meeting"
         />
-        <div className="py-28 xl:py-36 max-sm:py-16 max-sm:px-4 z-10  max-w-[1100px] w-full flex flex-col gap-12 max-sm:gap-16">
+        <div className="py-28 xl:py-36 max-sm:py-16 max-sm:px-4 z-10  max-w-[1100px] w-full flex flex-col xl:justify-center gap-12 max-sm:gap-16">
           <div className="w-full flex justify-center ">
             <div className="w-full">
               <div className="w-full flex justify-center">

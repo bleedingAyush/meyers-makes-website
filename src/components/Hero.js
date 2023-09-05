@@ -13,7 +13,7 @@ const Hero = () => {
     <>
       <div
         style={{ zIndex: "2" }}
-        className="relative w-full max-sm: h-[90vh] h-screen xl:h-[85vh] flex justify-center"
+        className="relative w-full max-sm: h-[90vh] h-screen xl:h-[90vh] flex justify-center"
       >
         <div
           style={{
