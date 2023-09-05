@@ -1,5 +1,8 @@
+import Header from "@/components/Header";
 import "./globals.css";
 import { Outfit } from "next/font/google";
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 
 const customFont = Outfit({
   subsets: ["latin"],

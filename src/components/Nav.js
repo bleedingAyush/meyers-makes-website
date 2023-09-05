@@ -44,7 +44,7 @@ export default function Nav(props) {
           </div>
           <div className="hidden lg:flex">
             <ul className="hidden lg:flex gap-4">
-              <Link href={""}>
+              <Link href={"/contact"}>
                 <li className="text-link-color font-medium">Contact</li>
               </Link>
             </ul>
@@ -92,7 +92,7 @@ export default function Nav(props) {
                   Services
                 </li>
               </Link>
-              <Link href={""}>
+              <Link href={"/contact"}>
                 <li onClick={() => setIsMenuOpen(false)} className="py-4">
                   Contact
                 </li>

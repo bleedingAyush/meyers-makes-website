@@ -12,6 +12,7 @@ import About from "@/components/About";
 import Testimonials from "@/components/Testimonial/Testimonials";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
+import Layout from "@/components/Layout";
 
 // form submit
 // privacy policy/terms of use page
@@ -20,27 +21,23 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main>
-      {/* nav */}
-      <div className="relative z-10 lg:bg-logo-color bg-transparent w-full lg:h-36 h-fit flex justify-center">
-        <Header />
-        <Nav />
-      </div>
+    <>
       {/* hero */}
-      <Hero />
-      {/* services */}
-      <Services />
-      {/* process */}
-      <Process />
-      {/* CTA */}
-      <MiddleCTA />
-      {/* about */}
-      <About />
-      {/*  */}
-      <Testimonials />
-      <div className="bg-teal h-2 w-full"></div>
-      <CTA />
-      <Footer />
-    </main>
+      <Layout>
+        <Hero />
+        {/* services */}
+        <Services />
+        {/* process */}
+        <Process />
+        {/* CTA */}
+        <MiddleCTA />
+        {/* about */}
+        <About />
+        {/*  */}
+        <Testimonials />
+        <div className="bg-teal h-2 w-full"></div>
+        <CTA />
+      </Layout>
+    </>
   );
 }
