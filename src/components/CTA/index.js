@@ -40,7 +40,7 @@ const CTA = () => {
                 <div className="w-16 relative h-16">
                   <Image
                     src={ben}
-                    alt=""
+                    alt="ben img"
                     layout="fill"
                     objectFit="cover"
                     className="rounded-full"

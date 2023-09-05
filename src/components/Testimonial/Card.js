@@ -29,7 +29,7 @@ const Card = ({ name, image, review }) => {
             </div>
           </div>
           <div>
-            <Image src={facebook} height={24} />
+            <Image src={facebook} height={24} alt="" />
           </div>
         </div>
 

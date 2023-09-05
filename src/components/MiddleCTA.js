@@ -23,7 +23,7 @@ const MiddleCTA = () => {
                 href={"tel:+1 226-168-1749"}
                 className="flex gap-1.5 items-center"
               >
-                <Image src={phone} height={18} alt="" />
+                <Image src={phone} height={18} alt="phone svg" />
                 <span className="text-white font-medium text-xl">
                   +1 226-168-1749
                 </span>
