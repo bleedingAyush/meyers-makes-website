@@ -163,6 +163,8 @@ const CTA = () => {
                 className="flex flex-col gap-4 mt-4 max-w-full"
                 onSubmit={handleSubmitt}
               >
+                <input type="hidden" name="form-name" value="booking" />
+
                 <input
                   name="name"
                   type="text"
