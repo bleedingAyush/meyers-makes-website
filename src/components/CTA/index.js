@@ -67,8 +67,12 @@ const CTA = () => {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData).toString(),
       });
-      console.log({ data });
-      toast.success("Request submitted successfully");
+      if (data.ok) {
+        console.log({ data });
+        toast.success("Request submitted successfully");
+      } else {
+        throw new Error("Something went wrong", data.status);
+      }
     } catch (err) {
       toast.error(err.message);
     }
