@@ -6,7 +6,6 @@ import tools from "../../../public/tools.jpg";
 import Link from "next/link";
 import phone from "../../../public/phone2.svg";
 import ben from "../../../public/ben.jpg";
-import { useFormik } from "formik";
 import * as Yup from "yup";
 import { toast } from "react-toastify";
 
@@ -68,7 +67,6 @@ const CTA = () => {
         body: new URLSearchParams(formData).toString(),
       });
       if (data.ok) {
-        console.log({ data });
         toast.success("Request submitted successfully");
       } else {
         throw new Error("Something went wrong", data.status);
@@ -77,21 +75,6 @@ const CTA = () => {
       toast.error(err.message);
     }
   }
-
-  const handleSubmitt = (event) => {
-    event.preventDefault();
-
-    const myForm = event.target;
-    const formData = new FormData(myForm);
-
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => console.log("Form successfully submitted"))
-      .catch((error) => alert(error));
-  };
 
   return (
     <>
@@ -156,12 +139,10 @@ const CTA = () => {
 
               <form
                 netlify
-                // data-netlify="true"
                 method="post"
                 name="booking"
-                // action="/success"
                 className="flex flex-col gap-4 mt-4 max-w-full"
-                onSubmit={handleSubmitt}
+                onSubmit={handleSubmit}
               >
                 <input type="hidden" name="form-name" value="booking" />
 
