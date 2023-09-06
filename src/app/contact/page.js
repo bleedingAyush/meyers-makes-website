@@ -82,7 +82,7 @@ const Contact = () => {
               Our team would love to hear from you
             </span>
             <form
-              netlify
+              data-netlify="true"
               method="post"
               name="contactForm"
               data-netlify-recaptcha="true"
