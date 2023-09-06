@@ -8,6 +8,11 @@
   --animation-duration: 3200ms;
 }
 
+html {
+  --scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
+}
+
 * {
   margin: 0;
   padding: 0;

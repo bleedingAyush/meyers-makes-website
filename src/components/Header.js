@@ -31,6 +31,7 @@ const Header = () => {
         </div>
         <Link
           href={"#booking"}
+          scroll={false}
           className="font-semibold uppercase text-[15px] text-black bg-button-color px-6 py-2.5 hover:bg-white"
         >
           Schedule a booking
