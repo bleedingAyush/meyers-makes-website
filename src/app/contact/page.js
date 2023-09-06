@@ -13,8 +13,8 @@ const validationSchema = Yup.object().shape({
     .required("required"),
   email: Yup.string().email("invalid").required("required"),
   message: Yup.string()
-    .min(2, "too Short!")
-    .max(50, "too Long!")
+    .min(2, "too short!")
+    .max(50, "too long!")
     .required("required"),
 });
 
@@ -84,7 +84,7 @@ const Contact = () => {
             <form
               netlify
               method="post"
-              name="contact"
+              name="contactForm"
               data-netlify-recaptcha="true"
               onSubmit={handleSubmit}
               className="flex flex-col gap-4 mt-6 w-96 max-sm:w-full"
