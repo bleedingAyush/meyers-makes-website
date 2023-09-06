@@ -140,7 +140,8 @@ const CTA = () => {
               </span>
 
               <form
-                data-netlify="true"
+                netlify
+                // data-netlify="true"
                 method="post"
                 name="booking"
                 action="/success"
