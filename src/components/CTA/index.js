@@ -140,7 +140,8 @@ const CTA = () => {
               </span>
 
               <form
-                netlify
+                data-netlify="true"
+                name="booking"
                 className="flex flex-col gap-4 mt-4 max-w-full"
                 onSubmit={handleSubmit}
               >
