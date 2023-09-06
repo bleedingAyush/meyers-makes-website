@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import React from "react";
 
-const page = () => {
+const Success = () => {
   return (
     <Layout>
       <div className="pt-28  text-center w-full flex flex-col gap-8 h-screen">
@@ -16,4 +16,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Success;
