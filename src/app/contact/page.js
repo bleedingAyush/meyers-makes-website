@@ -76,7 +76,7 @@ const Contact = () => {
     <>
       <Layout>
         <div className="min-h-[100vh] flex justify-center">
-          <div className="max-w-[1000px] py-24 px-2 w-full flex flex-col gap-4">
+          <div className="max-w-[1000px] py-24 px-2 max-sm:px-4 w-full flex flex-col gap-4">
             <span className="font-bold text-4xl text-black">Contact Us</span>
             <span className="font-bold text-2xl text-link-color">
               Our team would love to hear from you
