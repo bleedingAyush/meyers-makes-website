@@ -84,7 +84,7 @@ const Contact = () => {
             <form
               data-netlify="true"
               method="post"
-              name="contactForm"
+              name="contact"
               data-netlify-recaptcha="true"
               onSubmit={handleSubmit}
               className="flex flex-col gap-4 mt-6 w-96 max-sm:w-full"

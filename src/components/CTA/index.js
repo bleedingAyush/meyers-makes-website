@@ -151,7 +151,7 @@ const CTA = () => {
               </span>
 
               <form
-                netlify
+                data-netlify="true"
                 method="post"
                 name="booking"
                 data-netlify-recaptcha="true"
