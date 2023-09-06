@@ -142,7 +142,7 @@ const CTA = () => {
               <form
                 netlify
                 // data-netlify="true"
-                method="post"
+                // method="post"
                 name="booking"
                 action="/success"
                 className="flex flex-col gap-4 mt-4 max-w-full"
