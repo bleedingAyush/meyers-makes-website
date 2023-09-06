@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import tools from "../../../public/tools.jpg";
 import Link from "next/link";
 import phone from "../../../public/phone2.svg";
@@ -9,31 +9,33 @@ import ben from "../../../public/ben.jpg";
 import * as Yup from "yup";
 import { toast } from "react-toastify";
 
+const validationSchema = Yup.object().shape({
+  name: Yup.string()
+    .min(2, "too short!")
+    .max(20, "too long!")
+    .required("required"),
+  email: Yup.string().email("invalid").required("required"),
+  address: Yup.string()
+    .min(2, "too short!")
+    .max(50, "too long!")
+    .required("required"),
+  phone: Yup.string()
+    .min(10, "too short!")
+    .max(15, "too long!")
+    .required("required"),
+  date: Yup.string().required("required"),
+  time: Yup.string().required("required"),
+  message: Yup.string()
+    .min(2, "too Short!")
+    .max(50, "too Long!")
+    .required("required"),
+});
 const CTA = () => {
-  const validationSchema = Yup.object().shape({
-    name: Yup.string()
-      .min(2, "too short!")
-      .max(20, "too long!")
-      .required("required"),
-    email: Yup.string().email("invalid").required("required"),
-    address: Yup.string()
-      .min(2, "too short!")
-      .max(50, "too long!")
-      .required("required"),
-    phone: Yup.string()
-      .min(10, "too short!")
-      .max(15, "too long!")
-      .required("required"),
-    date: Yup.string().required("required"),
-    time: Yup.string().required("required"),
-    message: Yup.string()
-      .min(2, "too Short!")
-      .max(50, "too Long!")
-      .required("required"),
-  });
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    console.log("handle submit clicked");
     const values = {
       name: event.target.name.value,
       email: event.target.email.value,
@@ -57,21 +59,32 @@ const CTA = () => {
     }
   };
 
+  const startLoading = () => {
+    setIsLoading(true);
+  };
+
+  const stopLoading = () => {
+    setIsLoading(false);
+  };
+
   async function submitRequest(values) {
     const formData = new FormData(values);
 
     try {
+      startLoading();
       const data = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData).toString(),
       });
       if (data.ok) {
+        stopLoading();
         toast.success("Request submitted successfully");
       } else {
         throw new Error("Something went wrong", data.status);
       }
     } catch (err) {
+      stopLoading();
       toast.error(err.message);
     }
   }
@@ -141,6 +154,7 @@ const CTA = () => {
                 netlify
                 method="post"
                 name="booking"
+                data-netlify-recaptcha="true"
                 className="flex flex-col gap-4 mt-4 max-w-full"
                 onSubmit={handleSubmit}
               >
@@ -193,11 +207,17 @@ const CTA = () => {
                     className="border text-link-color bg-formColor focus:outline-none focus:border-button-color  px-2 py-2 w-[48%]"
                   />
                 </div>
+                <div data-netlify-recaptcha="true"></div>
                 <button
+                  disabled={isLoading}
                   type="submit"
-                  className="max-sm:w-full  text-center font-semibold uppercase text-[15px] text-black bg-button-color px-12 py-2.5 hover:bg-white border-button-color border-2 mt-2"
+                  className="max-sm:w-full  text-center font-semibold uppercase text-[15px] text-black bg-button-color px-12 py-2.5 hover:bg-white border-button-color border-2"
                 >
-                  Schedule a booking
+                  {isLoading ? (
+                    <span>Submitting...</span>
+                  ) : (
+                    <span>Schedule a booking</span>
+                  )}
                 </button>
               </form>
             </div>
