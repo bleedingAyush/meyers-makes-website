@@ -194,7 +194,10 @@ const CTA = () => {
                     className="border text-link-color bg-formColor focus:outline-none focus:border-button-color  px-2 py-2 w-[48%]"
                   />
                 </div>
-                <button className="max-sm:w-full  text-center font-semibold uppercase text-[15px] text-black bg-button-color px-12 py-2.5 hover:bg-white border-button-color border-2 mt-2">
+                <button
+                  type="submit"
+                  className="max-sm:w-full  text-center font-semibold uppercase text-[15px] text-black bg-button-color px-12 py-2.5 hover:bg-white border-button-color border-2 mt-2"
+                >
                   Schedule a booking
                 </button>
               </form>
