@@ -145,7 +145,7 @@ const CTA = () => {
                 name="booking"
                 action="/success"
                 className="flex flex-col gap-4 mt-4 max-w-full"
-                onSubmit={handleSubmit}
+                // onSubmit={handleSubmit}
               >
                 <input
                   name="name"
