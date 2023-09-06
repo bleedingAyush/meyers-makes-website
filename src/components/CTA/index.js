@@ -1,11 +1,79 @@
+"use client";
+
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import tools from "../../../public/tools.jpg";
 import Link from "next/link";
 import phone from "../../../public/phone2.svg";
 import ben from "../../../public/ben.jpg";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+import { toast } from "react-toastify";
 
 const CTA = () => {
+  const validationSchema = Yup.object().shape({
+    name: Yup.string()
+      .min(2, "too short!")
+      .max(20, "too long!")
+      .required("required"),
+    email: Yup.string().email("invalid").required("required"),
+    address: Yup.string()
+      .min(2, "too short!")
+      .max(50, "too long!")
+      .required("required"),
+    phone: Yup.string()
+      .min(10, "too short!")
+      .max(15, "too long!")
+      .required("required"),
+    date: Yup.string().required("required"),
+    time: Yup.string().required("required"),
+    message: Yup.string()
+      .min(2, "too Short!")
+      .max(50, "too Long!")
+      .required("required"),
+  });
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const values = {
+      name: event.target.name.value,
+      email: event.target.email.value,
+      address: event.target.address?.value,
+      phone: event.target.phone?.value,
+      date: event.target.date?.value,
+      time: event.target.time?.value,
+      message: event.target.message?.value,
+    };
+    try {
+      // Validate the form using Yup
+      await validationSchema.validate(values, { abortEarly: false });
+      await submitRequest(event.target);
+      // Handle form submission logic here if validation passes
+    } catch (error) {
+      error.inner.map((err, index) => {
+        if (index === 0) {
+          toast.warn(`${err.path} is ${err.message}`);
+        }
+      });
+    }
+  };
+
+  async function submitRequest(values) {
+    const formData = new FormData(values);
+
+    try {
+      const data = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+      });
+      console.log({ data });
+      toast.success("Request submitted successfully");
+    } catch (err) {
+      toast.error(err.message);
+    }
+  }
+
   return (
     <>
       <div
@@ -66,41 +134,54 @@ const CTA = () => {
               <span className="text-center text-lg font-medium">
                 Request your service
               </span>
-              <form className="flex flex-col gap-4 mt-4 max-w-full">
+
+              <form
+                netlify
+                className="flex flex-col gap-4 mt-4 max-w-full"
+                onSubmit={handleSubmit}
+              >
                 <input
+                  name="name"
                   type="text"
                   placeholder="Name"
                   className="border text-link-color bg-formColor focus:outline-none focus:border-button-color px-2 py-2"
                 />
+
                 <div className="flex justify-between">
                   <input
+                    name="email"
                     type="email"
                     placeholder="Email"
                     className="border text-link-color bg-formColor focus:outline-none focus:border-button-color  px-2 py-2 w-[48%]"
                   />
                   <input
+                    name="phone"
                     type="tel"
                     placeholder="Phone number"
                     className="border text-link-color bg-formColor focus:outline-none focus:border-button-color  px-2 py-2 w-[48%]"
                   />
                 </div>
                 <input
+                  name="address"
                   type="address"
                   placeholder="Your Address"
                   className="border text-link-color bg-formColor focus:outline-none focus:border-button-color px-2 py-2"
                 />
                 <input
+                  name="message"
                   type="text"
                   placeholder="What do you need help with?"
                   className="border text-link-color bg-formColor focus:outline-none focus:border-button-color px-2 py-2"
                 />
                 <div className="flex justify-between">
                   <input
+                    name="date"
                     type="text"
                     placeholder="Date of visit"
                     className="border text-link-color bg-formColor focus:outline-none focus:border-button-color  px-2 py-2 w-[48%]"
                   />
                   <input
+                    name="time"
                     type="text"
                     placeholder="Time of visit"
                     className="border text-link-color bg-formColor focus:outline-none focus:border-button-color  px-2 py-2 w-[48%]"

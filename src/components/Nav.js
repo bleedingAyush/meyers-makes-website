@@ -39,8 +39,9 @@ export default function Nav(props) {
             >
               Services
             </Link>
-
-            <Image height={90} src={Logo} alt="logo" className="lg:hidden" />
+            <Link href={"/"}>
+              <Image height={90} src={Logo} alt="logo" className="lg:hidden" />
+            </Link>
           </div>
           <div className="hidden lg:flex">
             <ul className="hidden lg:flex gap-4">

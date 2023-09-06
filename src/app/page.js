@@ -13,10 +13,11 @@ import Testimonials from "@/components/Testimonial/Testimonials";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import Layout from "@/components/Layout";
+import Toast from "@/libs/Toast";
 
 // form submit
 // privacy policy/terms of use page
-// contact us page
+// contact us form
 // test the layout in diff browsers
 
 export default function Home() {
@@ -38,6 +39,7 @@ export default function Home() {
         <div className="bg-teal h-2 w-full"></div>
         <CTA />
       </Layout>
+      <Toast />
     </>
   );
 }
