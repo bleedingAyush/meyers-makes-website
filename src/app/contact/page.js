@@ -1,7 +1,10 @@
+"use client";
+
 import Layout from "@/components/Layout";
-import React from "react";
+import React, { useState } from "react";
 import * as Yup from "yup";
 import { toast } from "react-toastify";
+import Toast from "@/libs/Toast";
 
 const validationSchema = Yup.object().shape({
   name: Yup.string()
@@ -70,49 +73,53 @@ const Contact = () => {
   }
 
   return (
-    <Layout>
-      <div className="min-h-[100vh] flex justify-center">
-        <div className="max-w-[1000px] py-24 px-2 w-full flex flex-col gap-4">
-          <span className="font-bold text-4xl text-black">Contact Us</span>
-          <span className="font-bold text-2xl text-link-color">
-            Our team would love to hear from you
-          </span>
-          <form
-            netlify
-            method="post"
-            name="contact"
-            data-netlify-recaptcha="true"
-            onSubmit={handleSubmit}
-            className="flex flex-col gap-4 mt-6 w-96 max-sm:w-full"
-          >
-            <input
-              name="name"
-              type="text"
-              className="px-2 py-2 bg-formColor focus:outline-none focus:border-button-color"
-              placeholder="Name"
-            />
-            <input
-              type="email"
-              className="px-2 py-2 bg-formColor focus:outline-none focus:border-button-color"
-              placeholder="Email"
-            />
-            <textarea
-              name="message"
-              type="text"
-              className="px-2 w-full h-40 py-2 bg-formColor focus:outline-none focus:border-button-color"
-              placeholder="Your Message"
-            />
-            <div data-netlify-recaptcha="true"></div>
-            <button
-              disabled={isLoading}
-              className="max-sm:w-full  text-center font-semibold text-lg text-black bg-button-color px-12 py-2 hover:bg-white border-button-color border-2 mt-2"
+    <>
+      <Layout>
+        <div className="min-h-[100vh] flex justify-center">
+          <div className="max-w-[1000px] py-24 px-2 w-full flex flex-col gap-4">
+            <span className="font-bold text-4xl text-black">Contact Us</span>
+            <span className="font-bold text-2xl text-link-color">
+              Our team would love to hear from you
+            </span>
+            <form
+              netlify
+              method="post"
+              name="contact"
+              data-netlify-recaptcha="true"
+              onSubmit={handleSubmit}
+              className="flex flex-col gap-4 mt-6 w-96 max-sm:w-full"
             >
-              {isLoading ? "Submitting..." : "Submit"}
-            </button>
-          </form>
+              <input
+                name="name"
+                type="text"
+                className="px-2 py-2 bg-formColor focus:outline-none focus:border-button-color"
+                placeholder="Name"
+              />
+              <input
+                name="email"
+                type="email"
+                className="px-2 py-2 bg-formColor focus:outline-none focus:border-button-color"
+                placeholder="Email"
+              />
+              <textarea
+                name="message"
+                type="text"
+                className="px-2 w-full h-40 py-2 bg-formColor focus:outline-none focus:border-button-color"
+                placeholder="Your Message"
+              />
+              <div data-netlify-recaptcha="true"></div>
+              <button
+                disabled={isLoading}
+                className="max-sm:w-full  text-center font-semibold text-lg text-black bg-button-color px-12 py-2 hover:bg-white border-button-color border-2 mt-2"
+              >
+                {isLoading ? "Submitting..." : "Submit"}
+              </button>
+            </form>
+          </div>
         </div>
-      </div>
-    </Layout>
+      </Layout>
+      <Toast />
+    </>
   );
 };
 
