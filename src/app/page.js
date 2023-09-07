@@ -15,12 +15,13 @@ import Footer from "@/components/Footer";
 import Layout from "@/components/Layout";
 import Toast from "@/libs/Toast";
 
+// fix the scrollable links
 // form submit
-// privacy policy/terms of use page
 // contact us form
-// test the layout in diff browsers
 // update number
-//google analytics
+// test the layout in diff browsers
+// privacy policy/terms of use page
+// google analytics
 
 export default function Home() {
   return (
