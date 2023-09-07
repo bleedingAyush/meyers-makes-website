@@ -154,7 +154,7 @@ const CTA = () => {
                 data-netlify="true"
                 method="post"
                 name="booking"
-                data-netlify-recaptcha="true"
+                // data-netlify-recaptcha="true"
                 className="flex flex-col gap-4 mt-4 max-w-full"
                 onSubmit={handleSubmit}
               >
@@ -207,7 +207,7 @@ const CTA = () => {
                     className="border text-link-color bg-formColor focus:outline-none focus:border-button-color  px-2 py-2 w-[48%]"
                   />
                 </div>
-                <div data-netlify-recaptcha="true"></div>
+                {/* <div data-netlify-recaptcha="true"></div> */}
                 <button
                   disabled={isLoading}
                   type="submit"

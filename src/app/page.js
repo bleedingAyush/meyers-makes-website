@@ -18,7 +18,6 @@ import Toast from "@/libs/Toast";
 // fix the scrollable links
 // form submit
 // contact us form
-// update number
 // test the layout in diff browsers
 // privacy policy/terms of use page
 // google analytics
