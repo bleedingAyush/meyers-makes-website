@@ -90,7 +90,7 @@ const Contact = () => {
               onSubmit={handleSubmit}
               className="flex flex-col gap-4 mt-6 w-96 max-sm:w-full"
             >
-              <input type="hidden" name="form-name" value="booking" />
+              <input type="hidden" name="form-name" value="contact" />
 
               <input
                 name="name"
