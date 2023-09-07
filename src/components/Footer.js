@@ -53,9 +53,9 @@ const Footer = () => {
               <Image src={mail} height={18} alt="mail svg" />
               <span className="text-white">Benmeyers94@gmail.com</span>
             </Link>
-            <Link href={"tel:+1 226-168-1749"} className="flex gap-1.5">
+            <Link href={"tel:+1 226-868-1749"} className="flex gap-1.5">
               <Image src={phone} height={18} alt="phone svg" />
-              <span className="text-white ">+1 226-168-1749</span>
+              <span className="text-white ">+1 226-868-1749</span>
             </Link>
             {/*  */}
             <div className="flex mt-2 flex-col gap-2 ">

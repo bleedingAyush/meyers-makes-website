@@ -19,6 +19,8 @@ import Toast from "@/libs/Toast";
 // privacy policy/terms of use page
 // contact us form
 // test the layout in diff browsers
+// update number
+//google analytics
 
 export default function Home() {
   return (

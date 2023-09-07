@@ -75,12 +75,12 @@ const Services = () => {
                 Schedule a booking
               </Link>
               <Link
-                href={"tel:+1 226-168-1749"}
+                href={"tel:+1 226-868-1749"}
                 className="flex gap-1.5 items-center"
               >
                 <Image src={phone} height={18} alt="phone svg" />
                 <span className="text-black font-medium text-xl">
-                  +1 226-168-1749
+                  +1 226-868-1749
                 </span>
               </Link>
             </div>

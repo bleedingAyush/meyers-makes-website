@@ -24,9 +24,9 @@ const Header = () => {
               Benmeyers94@gmail.com
             </span>
           </Link>
-          <Link href={"tel:+1 226-168-1749"} className="flex gap-1.5">
+          <Link href={"tel:+1 226-868-1749"} className="flex gap-1.5">
             <Image src={phone} height={18} alt="phone svg" />
-            <span className="text-white font-medium">+1 226-168-1749</span>
+            <span className="text-white font-medium">+1 226-868-1749</span>
           </Link>
         </div>
         <Link
