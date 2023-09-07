@@ -67,6 +67,7 @@ const Contact = () => {
         throw new Error("Something went wrong", data.status);
       }
     } catch (err) {
+      console.log("err", err);
       stopLoading();
       toast.error(err.message);
     }
@@ -89,6 +90,8 @@ const Contact = () => {
               onSubmit={handleSubmit}
               className="flex flex-col gap-4 mt-6 w-96 max-sm:w-full"
             >
+              <input type="hidden" name="form-name" value="booking" />
+
               <input
                 name="name"
                 type="text"
