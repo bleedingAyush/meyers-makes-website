@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import ben from "../../public/ben.jpg";
+import ScrollLink from "./Scrolllink";
 
 const About = () => {
   return (
@@ -31,12 +32,12 @@ const About = () => {
                 we&apos;re creating havens. Let&apos;s team up and bring your
                 home dreams to life, one project at a time!
               </span>
-              <Link
+              <ScrollLink
                 href={"#booking"}
                 className="max-sm:w-full text-center font-semibold uppercase text-[15px] text-black bg-button-color px-12 py-2 hover:bg-white border-button-color border-2 mt-8 max-sm:mt-4"
               >
                 Schedule a booking
-              </Link>
+              </ScrollLink>
             </div>
             <div className="w-[35%] h-[26rem]  max-sm:w-full relative">
               <Image src={ben} layout="fill" objectFit="cover" alt="Ben pic" />

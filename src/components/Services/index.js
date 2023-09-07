@@ -3,6 +3,7 @@ import React from "react";
 import Card from "./Card";
 import Link from "next/link";
 import phone from "../../../public/phone.svg";
+import ScrollLink from "../Scrolllink";
 
 const items = [
   {
@@ -68,12 +69,12 @@ const Services = () => {
           </div>
           <div className="w-full flex justify-center pt-20">
             <div className="flex max-sm:flex-col items-center gap-12 max-sm:gap-8">
-              <Link
+              <ScrollLink
                 href={"#booking"}
                 className="max-sm:w-full text-center font-semibold uppercase text-[15px] text-black bg-button-color px-12 py-2.5 hover:bg-white"
               >
                 Schedule a booking
-              </Link>
+              </ScrollLink>
               <Link
                 href={"tel:+1 226-868-1749"}
                 className="flex gap-1.5 items-center"

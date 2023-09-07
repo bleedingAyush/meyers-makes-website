@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import phone from "../../public/phone.svg";
 import Image from "next/image";
+import ScrollLink from "./Scrolllink";
 
 const MiddleCTA = () => {
   return (
@@ -13,12 +14,12 @@ const MiddleCTA = () => {
           </span>
           <div className="flex justify-end">
             <div className="flex flex-col items-center gap-12 gap-8">
-              <Link
+              <ScrollLink
                 href={"#booking"}
                 className="max-sm:w-full text-center font-semibold uppercase text-[15px] text-black bg-button-color px-12 py-2.5 hover:bg-white"
               >
                 Schedule a booking
-              </Link>
+              </ScrollLink>
               <Link
                 href={"tel:+1 226-868-1749"}
                 className="flex gap-1.5 items-center"

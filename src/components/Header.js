@@ -7,22 +7,9 @@ import Link from "next/link";
 import map from "../../public/mapmarker.svg";
 import mail from "../../public/mail.svg";
 import phone from "../../public/phone.svg";
+import ScrollLink from "./Scrolllink";
 
 const Header = () => {
-  const handleScroll = (e) => {
-    // first prevent the default behavior
-    e.preventDefault();
-    // get the href and remove everything before the hash (#)
-    const href = e.currentTarget.href;
-    const targetId = href.replace(/.*\#/, "");
-    // get the element by id and use scrollIntoView
-    const elem = document.getElementById(targetId);
-    window.scrollTo({
-      top: elem?.getBoundingClientRect().top,
-      behavior: "smooth",
-    });
-  };
-
   return (
     <>
       <div className="max-w-[1200px] lg:flex hidden items-center w-full flex justify-between">
@@ -45,14 +32,12 @@ const Header = () => {
             <span className="text-white font-medium">+1 226-868-1749</span>
           </Link>
         </div>
-        <Link
+        <ScrollLink
           href={"#booking"}
-          onClick={handleScroll}
-          scroll={false}
           className="font-semibold uppercase text-[15px] text-black bg-button-color px-6 py-2.5 hover:bg-white"
         >
           Schedule a booking
-        </Link>
+        </ScrollLink>
       </div>
     </>
   );

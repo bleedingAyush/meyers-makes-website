@@ -6,6 +6,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "../../public/logo.jpg";
+import ScrollLink from "./Scrolllink";
 
 export default function Nav(props) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,18 +28,18 @@ export default function Nav(props) {
             >
               Home
             </Link>
-            <Link
+            <ScrollLink
               href={"#about"}
               className="lg:block hidden text-link-color font-medium"
             >
               About Us
-            </Link>
-            <Link
+            </ScrollLink>
+            <ScrollLink
               href={"#services"}
               className="lg:block hidden text-link-color font-medium"
             >
               Services
-            </Link>
+            </ScrollLink>
             <Link href={"/"}>
               <Image height={90} src={Logo} alt="logo" className="lg:hidden" />
             </Link>
@@ -83,30 +84,30 @@ export default function Nav(props) {
                   Home
                 </li>
               </Link>
-              <Link href={"#about"}>
+              <ScrollLink href={"#about"}>
                 <li onClick={() => setIsMenuOpen(false)} className="py-4">
                   About
                 </li>
-              </Link>
-              <Link href={"#services"}>
+              </ScrollLink>
+              <ScrollLink href={"#services"}>
                 <li onClick={() => setIsMenuOpen(false)} className="py-4">
                   Services
                 </li>
-              </Link>
+              </ScrollLink>
               <Link href={"/contact"}>
                 <li onClick={() => setIsMenuOpen(false)} className="py-4">
                   Contact
                 </li>
               </Link>
             </ul>
-            <Link
+            <ScrollLink
               href={"#booking"}
               onClick={() => setIsMenuOpen(false)}
               className="max-sm:w-full flex flex-col items-center mt-4 text-center font-semibold uppercase text-[15px] text-black bg-button-color py-2.5 hover:bg-white"
             >
               <span>Schedule</span>
               <span>a booking</span>
-            </Link>
+            </ScrollLink>
             <div className="flex justify-center w-full gap-8 mt-8">
               <Link
                 target="_blank"

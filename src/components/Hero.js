@@ -8,6 +8,7 @@ import phone from "../../public/phone.svg";
 import Image from "next/image";
 import Logo from "../../public/logo.jpg";
 import Link from "next/link";
+import ScrollLink from "./Scrolllink";
 const Hero = () => {
   return (
     <>
@@ -63,12 +64,12 @@ const Hero = () => {
             </span>
           </div>
           <div className="flex max-sm:flex-col max-sm:items-center gap-12 max-sm:gap-8">
-            <Link
+            <ScrollLink
               href={"#booking"}
               className="max-sm:w-full text-center font-semibold uppercase text-[15px] text-black bg-button-color px-12 py-2.5 hover:bg-white"
             >
               Schedule a booking
-            </Link>
+            </ScrollLink>
             <Link
               href={"tel:+1 226-868-1749"}
               className="flex gap-1.5 items-center"
