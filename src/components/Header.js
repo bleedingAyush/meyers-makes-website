@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import Logo from "../../public/logo.jpg";
@@ -7,6 +9,20 @@ import mail from "../../public/mail.svg";
 import phone from "../../public/phone.svg";
 
 const Header = () => {
+  const handleScroll = (e) => {
+    // first prevent the default behavior
+    e.preventDefault();
+    // get the href and remove everything before the hash (#)
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, "");
+    // get the element by id and use scrollIntoView
+    const elem = document.getElementById(targetId);
+    window.scrollTo({
+      top: elem?.getBoundingClientRect().top,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <>
       <div className="max-w-[1200px] lg:flex hidden items-center w-full flex justify-between">
@@ -31,6 +47,7 @@ const Header = () => {
         </div>
         <Link
           href={"#booking"}
+          onClick={handleScroll}
           scroll={false}
           className="font-semibold uppercase text-[15px] text-black bg-button-color px-6 py-2.5 hover:bg-white"
         >
