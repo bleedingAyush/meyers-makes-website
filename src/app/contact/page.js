@@ -86,7 +86,7 @@ const Contact = () => {
               data-netlify="true"
               method="post"
               name="contact"
-              data-netlify-recaptcha="true"
+              // data-netlify-recaptcha="true"
               onSubmit={handleSubmit}
               className="flex flex-col gap-4 mt-6 w-96 max-sm:w-full"
             >
@@ -110,7 +110,7 @@ const Contact = () => {
                 className="px-2 w-full h-40 py-2 bg-formColor focus:outline-none focus:border-button-color"
                 placeholder="Your Message"
               />
-              <div data-netlify-recaptcha="true"></div>
+              {/* <div data-netlify-recaptcha="true"></div> */}
               <button
                 disabled={isLoading}
                 className="max-sm:w-full  text-center font-semibold text-lg text-black bg-button-color px-12 py-2 hover:bg-white border-button-color border-2 mt-2"
