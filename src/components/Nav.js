@@ -10,10 +10,23 @@ import ScrollLink from "./Scrolllink";
 
 export default function Nav(props) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  // const [loggedIn, setLoggedIn] = useContext(LoginContext);
 
   const handleNav = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleScroll = (e) => {
+    // first prevent the default behavior
+    e.preventDefault();
+    // get the href and remove everything before the hash (#)
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, "");
+    // get the element by id and use scrollIntoView
+    const elem = document.getElementById(targetId);
+    window.scrollTo({
+      top: elem?.getBoundingClientRect().top,
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -28,18 +41,20 @@ export default function Nav(props) {
             >
               Home
             </Link>
-            <ScrollLink
+            <Link
               href={"#about"}
+              onClick={handleScroll}
               className="lg:block hidden text-link-color font-medium"
             >
               About Us
-            </ScrollLink>
-            <ScrollLink
+            </Link>
+            <Link
+              onClick={handleScroll}
               href={"#services"}
               className="lg:block hidden text-link-color font-medium"
             >
               Services
-            </ScrollLink>
+            </Link>
             <Link href={"/"}>
               <Image height={90} src={Logo} alt="logo" className="lg:hidden" />
             </Link>
@@ -84,11 +99,11 @@ export default function Nav(props) {
                   Home
                 </li>
               </Link>
-              <ScrollLink href={"#about"}>
+              <Link href={"#about"} onClick={handleScroll}>
                 <li onClick={() => setIsMenuOpen(false)} className="py-4">
                   About
                 </li>
-              </ScrollLink>
+              </Link>
               <ScrollLink href={"#services"}>
                 <li onClick={() => setIsMenuOpen(false)} className="py-4">
                   Services
